@@ -36,16 +36,6 @@ $hotels = [
         'distance_to_center' => 50
     ],
 ];
-
-foreach ($hotels as $hotel) {
-    echo "<h2>" .
-        $hotel["name"] .
-        $hotel["description"] .
-        $hotel["parking"] .
-        $hotel["vote"] . 
-        $hotel["distance_to_center"] .
-        "</h2>";
-}
 ?>
 
 <!DOCTYPE html>
@@ -56,5 +46,37 @@ foreach ($hotels as $hotel) {
     <title>Hotel List</title>
 </head>
 <body>
+
+    <h2>Hotel List</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Parking</th>
+            <th>Vote</th>
+            <th>Distance to Center</th>
+        </tr>
+
+        <?php foreach ($hotels as $hotel) { ?>
+            <tr>
+                <td><?php echo $hotel["name"]; ?></td>
+                <td><?php echo $hotel["description"]; ?></td>
+                <td><?php echo $hotel["parking"] ? "Yes" : "No"; ?></td>
+                <td><?php echo $hotel["vote"]; ?></td>
+                <td><?php echo $hotel["distance_to_center"]; ?></td>
+            </tr>
+        <?php } ?>
+
+    </table>
+
 </body>
 </html>
+
+<style>
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
