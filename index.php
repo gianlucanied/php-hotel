@@ -58,16 +58,17 @@ $hotels = [
             <th>Distance to Center</th>
         </tr>
 
-        <?php foreach ($hotels as $hotel) { ?>
-            <tr>
-                <td><?php echo $hotel["name"]; ?></td>
-                <td><?php echo $hotel["description"]; ?></td>
-                <td><?php echo $hotel["parking"] ? "Yes" : "No"; ?></td>
-                <td><?php echo $hotel["vote"]; ?></td>
-                <td><?php echo $hotel["distance_to_center"]; ?></td>
-            </tr>
-        <?php } ?>
-
+         <?php foreach ($hotels as $hotel) {
+            echo "<tr>";
+            echo "<td>{$hotel['name']}</td>";
+            echo "<td>{$hotel['description']}</td>";
+            echo "<td>" . ($hotel['parking'] ? 'Yes' : 'No') . "</td>";
+            echo "<td>{$hotel['vote']}</td>";
+            echo "<td>{$hotel['distance_to_center']} km</td>";
+            echo "</tr>";
+         }
+        ?>
+        
     </table>
 
 </body>
