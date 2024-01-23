@@ -37,16 +37,14 @@ $hotels = [
     ],
 ];
 
-foreach($hotels as $hotel) {
-
-    echo 
-        "<h2>" 
-            . $hotel["name"] .
-            . $hotel["description"] .
-            . $hotel["parking"] .
-            . $hotel["vote"] . 
-            . $hotel["distance_to_center"]
-        . "</h2>";
+foreach ($hotels as $hotel) {
+    echo "<h2>" .
+        $hotel["name"] .
+        $hotel["description"] .
+        $hotel["parking"] .
+        $hotel["vote"] . 
+        $hotel["distance_to_center"] .
+        "</h2>";
 }
 ?>
 
@@ -58,9 +56,5 @@ foreach($hotels as $hotel) {
     <title>Hotel List</title>
 </head>
 <body>
-
-
-<h2>Hotel List</h2>
-
 </body>
 </html>
